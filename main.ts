@@ -10,6 +10,7 @@ DigitalPin.P2,
 basic.forever(function () {
     TEMP = Environment.dht11value(Environment.DHT11Type.DHT11_temperature_C, DigitalPin.P0)
     basic.showNumber(TEMP)
+    TEMP = TEMP * 100
     tm.showNumber(TEMP)
     basic.pause(1000)
     HUM = Environment.dht11value(Environment.DHT11Type.DHT11_humidity, DigitalPin.P0)
